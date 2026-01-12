@@ -16,24 +16,25 @@ export default function Home() {
   }
 
   return (
-    <div style={{ background: "#f2f2f2", minHeight: "100vh", padding: "20px 0" }}>
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 10 }}>
+    <div style={{ background: "#f4f4f4", minHeight: "100vh" }}>
+      {/* Banner */}
+      <div style={{ textAlign: "center", background: "#fff" }}>
         <img
-          src="/logo.png"
-          alt="Board Logo"
-          style={{ width: 70, marginBottom: 6 }}
+          src="/banner.png"
+          alt="JKBOSE Banner"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            borderBottom: "1px solid #ddd"
+          }}
         />
-        <h3 style={{ margin: 0 }}>
-          Jammu & Kashmir Board of School Education
-        </h3>
       </div>
 
       {isStaging && (
         <div
           style={{
-            maxWidth: 520,
-            margin: "0 auto 10px",
+            maxWidth: 600,
+            margin: "10px auto",
             background: "#fff3cd",
             border: "1px solid #ffeeba",
             color: "#856404",
@@ -49,8 +50,8 @@ export default function Home() {
       {/* Main Card */}
       <div
         style={{
-          maxWidth: 520,
-          margin: "0 auto",
+          maxWidth: 600,
+          margin: "10px auto",
           background: "#ffffff",
           border: "1px solid #dcdcdc",
           padding: 20
@@ -59,10 +60,10 @@ export default function Home() {
         <div
           style={{
             background: "#f5d6d6",
-            color: "#000",
             padding: "8px 10px",
             fontSize: 14,
-            marginBottom: 15
+            marginBottom: 15,
+            border: "1px solid #e1bcbc"
           }}
         >
           Result of Secondary School Examination (Class 10th)
@@ -101,27 +102,54 @@ export default function Home() {
             />
           </div>
 
-          {/* Demo captcha placeholder */}
+          {/* Captcha Placeholder (UI Match) */}
           <div
             style={{
               border: "1px solid #ccc",
               padding: 10,
               marginBottom: 15,
-              textAlign: "center",
-              fontSize: 13,
-              color: "#555"
+              background: "#fafafa"
             }}
           >
-            Enter Characters As Shown In Image  
-            <br />
-            <span style={{ fontSize: 18, letterSpacing: 3 }}>A9K3D</span>
+            <div style={{ fontSize: 13, marginBottom: 6 }}>
+              Enter Characters As Shown In Image
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10
+              }}
+            >
+              <div
+                style={{
+                  flex: 1,
+                  padding: "6px 10px",
+                  border: "1px solid #aaa",
+                  fontSize: 18,
+                  letterSpacing: 3,
+                  background: "#fff"
+                }}
+              >
+                5A9KQ
+              </div>
+              <input
+                type="text"
+                placeholder="Enter captcha"
+                style={{
+                  flex: 1,
+                  padding: 8,
+                  border: "1px solid #ccc"
+                }}
+              />
+            </div>
           </div>
 
           <div style={{ textAlign: "center" }}>
             <button
               type="submit"
               style={{
-                padding: "6px 18px",
+                padding: "6px 20px",
                 marginRight: 10,
                 background: "#0d6efd",
                 color: "#fff",
@@ -139,7 +167,7 @@ export default function Home() {
                 setReg("");
               }}
               style={{
-                padding: "6px 18px",
+                padding: "6px 20px",
                 background: "#6c757d",
                 color: "#fff",
                 border: "none",
@@ -153,7 +181,15 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div style={{ textAlign: "center", marginTop: 15, fontSize: 12 }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: 15,
+          paddingBottom: 20,
+          fontSize: 12,
+          color: "#333"
+        }}
+      >
         © Jammu & Kashmir Board of School Education
       </div>
     </div>
