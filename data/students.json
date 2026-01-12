@@ -1,0 +1,18 @@
+[
+  {
+    "roll": "123456",
+    "reg": "111111",
+    "name": "AMAN KUMAR",
+    "mother": "SANGITA DEVI",
+    "father": "SURESH KUMAR",
+    "dob": "01/01/2009",
+    "schoolCode": "82/1028",
+    "marks": {
+      "English": { "theory": 23, "practical": 28 },
+      "Urdu": { "theory": 25, "practical": 27 },
+      "Mathematics": { "theory": 23, "practical": 28 },
+      "Science": { "theory": 31, "practical": 29 },
+      "Social Science": { "theory": 26, "practical": 28 }
+    }
+  }
+]
