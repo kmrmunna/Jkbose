@@ -1,4 +1,4 @@
-import students from "@/data/students.json";
+import students from "../../../data/students.json";
 
 function grade(total) {
   if (total >= 60) return "B1";
