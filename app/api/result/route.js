@@ -1,4 +1,4 @@
-import students from "../../../../data/students.json";
+import students from "../../../data/students.json";
 
 function getGrade(total) {
   if (total >= 75) return "A";
@@ -15,7 +15,7 @@ export async function GET(req) {
 
   if (!roll || !reg) {
     return Response.json(
-      { error: "Roll number and Registration number required" },
+      { error: "Roll & Registration number required" },
       { status: 400 }
     );
   }
@@ -34,29 +34,23 @@ export async function GET(req) {
   let totalMarks = 0;
   const marks = {};
 
-  for (const subject in student.marks) {
-    const theory = student.marks[subject].theory;
-    const practical = student.marks[subject].practical;
-    const total = theory + practical;
+  for (const sub in student.marks) {
+    const t = student.marks[sub].theory;
+    const p = student.marks[sub].practical;
+    const total = t + p;
 
     totalMarks += total;
 
-    marks[subject] = {
-      theory,
-      practical,
+    marks[sub] = {
+      theory: t,
+      practical: p,
       total,
       grade: getGrade(total)
     };
   }
 
   return Response.json({
-    roll: student.roll,
-    reg: student.reg,
-    name: student.name,
-    mother: student.mother,
-    father: student.father,
-    dob: student.dob,
-    schoolCode: student.schoolCode,
+    ...student,
     marks,
     totalMarks,
     result:
@@ -64,4 +58,4 @@ export async function GET(req) {
         ? "PASS"
         : "FAIL"
   });
-}
+      }
