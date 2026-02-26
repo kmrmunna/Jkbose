@@ -1,6 +1,6 @@
 export const metadata = {
   title: "JKBOSE – Result Portal",
-  description: "Jammu & Kashmir Board of School Education – Result Portal"
+  description: "idresss bhai  – Result Portal"
 };
 
 export default function RootLayout({ children }) {
